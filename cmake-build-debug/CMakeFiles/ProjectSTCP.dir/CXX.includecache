@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jpedr/AED/ProjectSTCP/src/graph.cpp
+graph.h
+C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+climits
+-
+queue
+-
+cmath
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+minHeap.h
+C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
+node.h
+C:/Users/jpedr/AED/ProjectSTCP/src/node.h
+vector
+-
+list
+-
+iostream
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
+vector
+-
+unordered_map
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/node.h
+string
+-
+iostream
+-
+utility
+-
+list
+-
+

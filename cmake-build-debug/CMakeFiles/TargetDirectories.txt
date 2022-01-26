@@ -1,0 +1,3 @@
+C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir
+C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
