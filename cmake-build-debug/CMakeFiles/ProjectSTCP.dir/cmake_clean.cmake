@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProjectSTCP.dir/main.cpp.obj"
   "CMakeFiles/ProjectSTCP.dir/src/graph.cpp.obj"
+  "CMakeFiles/ProjectSTCP.dir/src/input.cpp.obj"
+  "CMakeFiles/ProjectSTCP.dir/src/menus.cpp.obj"
   "CMakeFiles/ProjectSTCP.dir/src/node.cpp.obj"
   "CMakeFiles/ProjectSTCP.dir/src/readFiles.cpp.obj"
   "ProjectSTCP.exe"

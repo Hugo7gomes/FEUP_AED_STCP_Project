@@ -20,9 +20,9 @@ void node::showNode() {
     cout << lati << endl;
     cout << longi << endl;
     cout << name << endl;*/
-    for(Edge e:adj){
+    /*for(Edge e:adj){
         cout << "destino:" << e.dest << " " << "line:" << e.line << endl;
-    }
+    }*/
     cout << endl;
 }
 
@@ -58,11 +58,11 @@ void node::setPred(int pred) {
     this->pred = pred;
 }
 
-string node::getCurrentLine() {
+list<string> node::getCurrentLine() {
     return currentLine;
 }
 
-void node::setCurrentLine(string line) {
+void node::setCurrentLine(list<string> line) {
     this->currentLine = line;
 }
 
@@ -72,5 +72,9 @@ double node::getLati() {
 
 double node::getLongi() {
     return this->longi;
+}
+
+string node::getZone() {
+    return zone;
 }
 

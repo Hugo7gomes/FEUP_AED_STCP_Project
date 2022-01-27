@@ -53,7 +53,16 @@ void readFiles::readLine(string fileNameline, string lineCode, Graph &g) {
     getline(lineStream,stop1);
 
     while(getline(lineStream,stop2)){
-        g.addEdge(mapCode[stop1], mapCode[stop2], 1, lineCode);
+        bool insert = false;
+        for(Edge &e : g.getNodes()[mapCode[stop1]].getAdj()){
+            if(e.dest == mapCode[stop2]){
+                e.lines.push_back(lineCode);
+                insert = true;
+            }
+        }
+        if(!insert){
+            g.addEdge(mapCode[stop1], mapCode[stop2], 1, lineCode);
+        }
         stop1 = stop2;
     }
     lineStream.close();

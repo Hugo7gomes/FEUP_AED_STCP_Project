@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/jpedr/AED/ProjectSTCP/main.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/main.cpp.obj"
   "C:/Users/jpedr/AED/ProjectSTCP/src/graph.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/src/graph.cpp.obj"
+  "C:/Users/jpedr/AED/ProjectSTCP/src/input.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/src/input.cpp.obj"
+  "C:/Users/jpedr/AED/ProjectSTCP/src/menus.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/src/menus.cpp.obj"
   "C:/Users/jpedr/AED/ProjectSTCP/src/node.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/src/node.cpp.obj"
   "C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.cpp" "C:/Users/jpedr/AED/ProjectSTCP/cmake-build-debug/CMakeFiles/ProjectSTCP.dir/src/readFiles.cpp.obj"
   )

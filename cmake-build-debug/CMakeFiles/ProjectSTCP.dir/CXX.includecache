@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jpedr/AED/ProjectSTCP/src/graph.cpp
-graph.h
+C:/Users/jpedr/AED/ProjectSTCP/main.cpp
+src/readFiles.h
+C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.h
+src/graph.h
 C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
-climits
--
-queue
--
-cmath
--
+src/menus.h
+C:/Users/jpedr/AED/ProjectSTCP/src/menus.h
 
 C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
 minHeap.h
@@ -27,6 +25,28 @@ list
 -
 iostream
 -
+
+C:/Users/jpedr/AED/ProjectSTCP/src/input.h
+string
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/menus.cpp
+menus.h
+C:/Users/jpedr/AED/ProjectSTCP/src/menus.h
+algorithm
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/menus.h
+string
+-
+graph.h
+C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+map
+-
+input.h
+C:/Users/jpedr/AED/ProjectSTCP/src/input.h
+readFiles.h
+C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.h
 
 C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
 vector
@@ -42,5 +62,15 @@ iostream
 utility
 -
 list
+-
+
+C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.h
+vector
+-
+node.h
+C:/Users/jpedr/AED/ProjectSTCP/src/node.h
+graph.h
+C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+map
 -
 

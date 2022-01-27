@@ -17,7 +17,9 @@ class Graph {
     bool hasDir;        // false: undirect; true: directed
     vector<node> nodes; // The list of nodes being represented
 
-    void dijkstra(int s);
+
+
+    void dijkstra_Lines(int s);
 
 public:
     Graph( bool dir = false, vector<node> nodes = {});
@@ -26,15 +28,27 @@ public:
 
     void bfs (int v, int final);
 
-    double dijkstra_distance(int a, int b);
+    void dijkstra_Zones(int s);
 
-    list<int> dijkstra_path(int a, int b);
+    void dijkstra_distance(int s);
+
+    double dijkstra_getDistance(int a, int b);
+
+    list<pair<int,string>> dijkstra_path_Lines(int a, int b);
+
+    list<int> getPath(int a, int b);
 
     double haversine(double lat1, double lon1, double lat2, double lon2);
 
     void setDistances();
 
-    void setNumStops(int s);
+    void addEdgesWalk(double distance);
+
+    void deleteEdgesWalk();
+
+
+
+
 
     vector<node>& getNodes();
 };

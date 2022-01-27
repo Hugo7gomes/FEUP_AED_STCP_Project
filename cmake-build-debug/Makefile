@@ -176,6 +176,54 @@ src/graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/graph.cpp.s
 .PHONY : src/graph.cpp.s
 
+src/input.obj: src/input.cpp.obj
+.PHONY : src/input.obj
+
+# target to build an object file
+src/input.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/input.cpp.obj
+.PHONY : src/input.cpp.obj
+
+src/input.i: src/input.cpp.i
+.PHONY : src/input.i
+
+# target to preprocess a source file
+src/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/input.cpp.i
+.PHONY : src/input.cpp.i
+
+src/input.s: src/input.cpp.s
+.PHONY : src/input.s
+
+# target to generate assembly for a file
+src/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/input.cpp.s
+.PHONY : src/input.cpp.s
+
+src/menus.obj: src/menus.cpp.obj
+.PHONY : src/menus.obj
+
+# target to build an object file
+src/menus.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/menus.cpp.obj
+.PHONY : src/menus.cpp.obj
+
+src/menus.i: src/menus.cpp.i
+.PHONY : src/menus.i
+
+# target to preprocess a source file
+src/menus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/menus.cpp.i
+.PHONY : src/menus.cpp.i
+
+src/menus.s: src/menus.cpp.s
+.PHONY : src/menus.s
+
+# target to generate assembly for a file
+src/menus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/src/menus.cpp.s
+.PHONY : src/menus.cpp.s
+
 src/node.obj: src/node.cpp.obj
 .PHONY : src/node.obj
 
@@ -239,6 +287,12 @@ help:
 	@echo ... src/graph.obj
 	@echo ... src/graph.i
 	@echo ... src/graph.s
+	@echo ... src/input.obj
+	@echo ... src/input.i
+	@echo ... src/input.s
+	@echo ... src/menus.obj
+	@echo ... src/menus.i
+	@echo ... src/menus.s
 	@echo ... src/node.obj
 	@echo ... src/node.i
 	@echo ... src/node.s

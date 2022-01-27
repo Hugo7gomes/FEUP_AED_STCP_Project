@@ -4,6 +4,8 @@
 CMakeFiles/ProjectSTCP.dir/main.cpp.obj: \
  ../main.cpp \
  ../src/graph.h \
+ ../src/input.h \
+ ../src/menus.h \
  ../src/minHeap.h \
  ../src/node.h \
  ../src/readFiles.h
@@ -12,6 +14,17 @@ CMakeFiles/ProjectSTCP.dir/src/graph.cpp.obj: \
  ../src/graph.h \
  ../src/minHeap.h \
  ../src/node.h
+CMakeFiles/ProjectSTCP.dir/src/input.cpp.obj: \
+ ../src/input.cpp \
+ ../src/input.h
+CMakeFiles/ProjectSTCP.dir/src/menus.cpp.obj: \
+ ../src/graph.h \
+ ../src/input.h \
+ ../src/menus.cpp \
+ ../src/menus.h \
+ ../src/minHeap.h \
+ ../src/node.h \
+ ../src/readFiles.h
 CMakeFiles/ProjectSTCP.dir/src/node.cpp.obj: \
  ../src/node.cpp \
  ../src/node.h

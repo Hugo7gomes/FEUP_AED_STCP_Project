@@ -1,6 +1,7 @@
 
 #include "src/readFiles.h"
 #include "src/graph.h"
+#include "src/menus.h"
 using namespace  std;
 int main() {
     readFiles fileReader = readFiles();
@@ -9,21 +10,54 @@ int main() {
     Graph g1 = Graph(true,fileReader.getNodes());
     fileReader.readLines(g1);
 
-    //cout << g1.getNodes()[fileReader.getMapCode()["PSEC2"]].getAdj().size() << endl;
+    Menus menus(g1, fileReader);
+    menus.walkMenu();
 
+
+    //Origem e destino
     string stop1, stop2;
     stop1 = "JB2";
     stop2 = "FEUP1";
-    //g1.setNumStops(fileReader.getMapCode()[stop1]);
-    //cout << g1.dijkstra_distance(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
 
-    //g1.bfs(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
-    list<int> path = g1.dijkstra_path(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
-    list<int>::iterator it;
-    for(it = path.begin(); it != path.end();it++){
-        cout << g1.getNodes()[*it].getCode().first << endl;
-        cout << g1.getNodes()[*it].getCurrentLine() << endl;
-    }
+
+    //cout << fileReader.getMapCode().find("12345")->second << endl;
+
+    //Adicionar Edges ANDAR
+    //g1.addEdgesWalk(0.03);
+
+    //Menor numero de paragens:
+    //g1.bfs(fileReader.getMapCode()[stop1], fileReader.getMapCode()[stop2]);
+
+
+    //Menor distancia
+    /*g1.setDistances();
+    g1.dijkstra_distance(fileReader.getMapCode()[stop1]);
+    double distance = g1.dijkstra_getDistance(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
+    //cout << distance << endl;
+    */
+
+    //Mais barato
+    //g1.dijkstra_Zones(fileReader.getMapCode()[stop1]);
+
+    /*
+    //Menor mudancas de Linha
+    list<pair<int, string>> pathLines = g1.dijkstra_path_Lines(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
+    for(pair<int, string> i : pathLines){
+        if( !g1.getNodes()[i.first].getCurrentLine().empty()){
+            cout <<"LINE:" <<  i.second << endl;
+        }
+        cout << g1.getNodes()[i.first].getCode().first << endl;
+    }*/
+
+
+    //Mostrar path
+    /*list<int> path = g1.getPath(fileReader.getMapCode()[stop1],fileReader.getMapCode()[stop2]);
+    for(int i : path){
+        if( !g1.getNodes()[i].getCurrentLine().empty()){
+            cout <<"LINE:" <<  g1.getNodes()[i].getCurrentLine().front()<< endl;
+        }
+        cout << g1.getNodes()[i].getCode().first << endl;
+    }*/
 
     return 0;
 }

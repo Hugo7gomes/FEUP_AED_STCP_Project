@@ -89,6 +89,18 @@
 		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/graph.h">
 			<Option target="ProjectSTCP"/>
 		</Unit>
+		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/input.cpp">
+			<Option target="ProjectSTCP"/>
+		</Unit>
+		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/input.h">
+			<Option target="ProjectSTCP"/>
+		</Unit>
+		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/menus.cpp">
+			<Option target="ProjectSTCP"/>
+		</Unit>
+		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/menus.h">
+			<Option target="ProjectSTCP"/>
+		</Unit>
 		<Unit filename="C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h">
 			<Option target="ProjectSTCP"/>
 		</Unit>

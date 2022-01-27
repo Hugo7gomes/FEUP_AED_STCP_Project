@@ -11,7 +11,7 @@ using namespace  std;
 struct Edge {
     int dest;   // Destination node
     double weight; // An integer weight
-    string line; //
+    list<string> lines; //
 };
 
 class node {
@@ -23,7 +23,7 @@ class node {
     bool visited;
     double dist;
     int pred;
-    string currentLine = "";
+    list<string> currentLine;
     list<Edge> adj;
 public:
     node(string code, int n, string zone, double latitude, double longitude,string name);
@@ -36,10 +36,11 @@ public:
     void setDist(double dist);
     int getPred();
     void setPred(int pred);
-    string getCurrentLine();
-    void setCurrentLine(string line);
+    list<string> getCurrentLine();
+    void setCurrentLine(list<string> line);
     double getLati();
     double getLongi();
+    string getZone();
 };
 
 

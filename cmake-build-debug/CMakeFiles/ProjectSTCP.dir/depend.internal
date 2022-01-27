@@ -4,6 +4,8 @@
 CMakeFiles/ProjectSTCP.dir/main.cpp.obj
  C:/Users/jpedr/AED/ProjectSTCP/main.cpp
  C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/input.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/menus.h
  C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
  C:/Users/jpedr/AED/ProjectSTCP/src/node.h
  C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.h
@@ -12,6 +14,17 @@ CMakeFiles/ProjectSTCP.dir/src/graph.cpp.obj
  C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
  C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
  C:/Users/jpedr/AED/ProjectSTCP/src/node.h
+CMakeFiles/ProjectSTCP.dir/src/input.cpp.obj
+ C:/Users/jpedr/AED/ProjectSTCP/src/input.cpp
+ C:/Users/jpedr/AED/ProjectSTCP/src/input.h
+CMakeFiles/ProjectSTCP.dir/src/menus.cpp.obj
+ C:/Users/jpedr/AED/ProjectSTCP/src/graph.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/input.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/menus.cpp
+ C:/Users/jpedr/AED/ProjectSTCP/src/menus.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/minHeap.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/node.h
+ C:/Users/jpedr/AED/ProjectSTCP/src/readFiles.h
 CMakeFiles/ProjectSTCP.dir/src/node.cpp.obj
  C:/Users/jpedr/AED/ProjectSTCP/src/node.cpp
  C:/Users/jpedr/AED/ProjectSTCP/src/node.h
