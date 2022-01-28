@@ -22,6 +22,7 @@ public:
     void walkMenu();
     void menuStops();
     void menuCriteria();
+    void showPathLines();
     void inputStopsCode();
     void inputLocalCords();
     string nearStops();

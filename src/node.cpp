@@ -13,19 +13,6 @@ node::node(string code, int n, string zone, double latitude, double longitude, s
     this->name = name;
 }
 
-void node::showNode() {
-    /*cout << code.second << endl;
-    cout << code.first << endl;
-    cout << zone << endl;
-    cout << lati << endl;
-    cout << longi << endl;
-    cout << name << endl;*/
-    /*for(Edge e:adj){
-        cout << "destino:" << e.dest << " " << "line:" << e.line << endl;
-    }*/
-    cout << endl;
-}
-
 pair<string, int> node::getCode() {
     return this->code;
 }

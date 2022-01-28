@@ -44,12 +44,6 @@ public:
 
     void addEdgesWalk(double distance);
 
-    void deleteEdgesWalk();
-
-
-
-
-
     vector<node>& getNodes();
 };
 

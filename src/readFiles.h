@@ -20,7 +20,6 @@ public:
     readFiles();
     void readNodes();
     void addNode(node n);
-    void showNode(string nodeCode,Graph g);
     vector<node>& getNodes();
     void readLine(string fileNameline, string lineCode, Graph& g);
     void readLines(Graph& g);

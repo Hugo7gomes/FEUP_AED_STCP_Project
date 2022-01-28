@@ -41,6 +41,7 @@ vector<node> &Graph::getNodes() {
 void Graph::bfs(int v, int final) {
     for (int i=1; i<=n; i++) {
         nodes[i].setVisited(false);
+        nodes[i].setDist(INF);
     }
     queue<int> q; // queue of unvisited nodes
     q.push(v);
@@ -59,7 +60,7 @@ void Graph::bfs(int v, int final) {
                 nodes[w].setVisited(true);
                 nodes[w].setDist(nodes[u].getDist() + 1);
                 nodes[w].setPred(u);
-                nodes[w].setCurrentLine({e.lines.front()});
+                nodes[w].setCurrentLine({e.lines});
             }
         }
     }
@@ -95,7 +96,7 @@ void Graph::dijkstra_distance(int s) {
                 nodes[v].setDist(nodes[u].getDist() + w);
                 q.decreaseKey(v, nodes[v].getDist());
                 nodes[v].setPred(u);
-                nodes[v].setCurrentLine({e.lines.front()});
+                nodes[v].setCurrentLine({e.lines});
             }
         }
     }
@@ -109,7 +110,6 @@ double Graph::dijkstra_getDistance(int a, int b) {
 
 //path para a distancia, zonas e menos paragens
 list<int> Graph::getPath(int a, int b) {
-    cout << nodes[b].getDist() << endl;
     list<int> path;
     if (nodes[b].getDist() == INF) return path;
     path.push_back(b);
@@ -135,12 +135,11 @@ void Graph::dijkstra_Lines(int s) {
     nodes[s].setPred(s);
     while (q.getSize()>0) {
         int u = q.removeMin();
-        // cout << "Node " << u << " with dist = " << nodes[u].dist << endl;
         nodes[u].setVisited(true);
         for (Edge e : nodes[u].getAdj()) {
             list<string> intersect = intersection(nodes[u].getCurrentLine(), e.lines);
             double w = 0;
-            if(intersect.size() == 0){
+            if(intersect.empty()){
                 w = 1;
             }
             int v = e.dest;
@@ -227,7 +226,7 @@ void Graph::dijkstra_Zones(int s) {
                 nodes[v].setDist(nodes[u].getDist() + w);
                 q.decreaseKey(v, nodes[v].getDist());
                 nodes[v].setPred(u);
-                nodes[v].setCurrentLine({e.lines.front()});
+                nodes[v].setCurrentLine({e.lines});
             }
         }
     }
@@ -238,21 +237,17 @@ void Graph::addEdgesWalk(double distance) {
         for(node& n1:nodes){
             if(n.getCode().second == n1.getCode().second)
                 continue;
-            if(haversine(n.getLati(),n.getLongi(),n1.getLati(),n1.getLongi()) < distance){
+            bool addEdgeBool;
+            for(Edge e: n.getAdj()){
+                if(e.dest == n1.getCode().second){
+                    addEdgeBool = false;
+                    break;
+                }
+            }
+            if(haversine(n.getLati(),n.getLongi(),n1.getLati(),n1.getLongi()) < distance && addEdgeBool){
                 addEdge(n.getCode().second,n1.getCode().second,1,"ANDAR");
             }
         }
     }
 }
 
-void Graph::deleteEdgesWalk() {
-    for(node& n:nodes){
-        list<Edge>::iterator it1;
-        for(it1 = n.getAdj().begin(); it1 != n.getAdj().end(); it1++){
-            it1->lines.remove("ANDAR");
-            if(it1->lines.empty()){
-                n.getAdj().erase(it1);
-            }
-        }
-    }
-}

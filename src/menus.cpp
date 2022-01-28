@@ -123,6 +123,22 @@ string Menus::nearStops() {
         }
     }
 
+    while(vectorPartidas.empty()){
+        cout << "Nao existem paragens proximas da localizacao indicada" << endl;
+        cout << "Latitude:" << endl;
+        input::inputDouble(lat1);
+        cout << "Longitude:" << endl;
+        input::inputDouble(long1);
+
+        for(node n: g1.getNodes()){
+            if(g1.haversine(n.getLati(),n.getLongi(),lat1,long1) < distance){
+                vectorPartidas.push_back(n.getCode().first);
+            }
+        }
+    }
+
+
+
     cout << "Paragens proximas do local" << endl;
     for(string s: vectorPartidas){
         cout << s << endl;
@@ -167,10 +183,16 @@ void Menus::menuCriteria() {
                 showPath();
                 break;
             case 2:
+                g1.setDistances();
+                cout << "Distancia:" << g1.dijkstra_getDistance(mapCode[stop1], mapCode[stop2]) << endl;
+                showPath();
                 break;
             case 3:
+                showPathLines();
                 break;
             case 4:
+                g1.dijkstra_Zones(mapCode[stop1]);
+                showPath();
                 break;
             case 0:
                 isRunning = false;
@@ -183,14 +205,26 @@ void Menus::showPath() {
     list<int> path = g1.getPath(mapCode[stop1], mapCode[stop2]);
     for (int i: path) {
         if (!g1.getNodes()[i].getCurrentLine().empty()) {
-            cout << "LINE:" << g1.getNodes()[i].getCurrentLine().front() << endl;
+            cout << "LINES: ";
+            for(string s : g1.getNodes()[i].getCurrentLine()){
+                cout << s << " ";
+            }
+            cout << endl;
         }
         cout << g1.getNodes()[i].getCode().first << endl;
     }
     cout << endl;
 }
 
-
+void Menus::showPathLines(){
+    list<pair<int, string>> pathLines = g1.dijkstra_path_Lines(mapCode[stop1],mapCode[stop2]);
+    for(pair<int, string> i : pathLines){
+        if( !g1.getNodes()[i.first].getCurrentLine().empty()){
+            cout <<"LINE:" <<  i.second << endl;
+        }
+        cout << g1.getNodes()[i.first].getCode().first << endl;
+    }
+}
 
 
 

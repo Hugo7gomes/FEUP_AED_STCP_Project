@@ -27,7 +27,6 @@ class node {
     list<Edge> adj;
 public:
     node(string code, int n, string zone, double latitude, double longitude,string name);
-    void showNode();
     pair<string, int> getCode();
     list<Edge>& getAdj();
     bool getVisited();

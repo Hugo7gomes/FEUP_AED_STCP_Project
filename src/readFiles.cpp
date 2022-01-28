@@ -13,10 +13,6 @@ void readFiles::addNode(node n) {
     this->nodes.push_back(n);
 }
 
-void readFiles::showNode(string nodeCode,Graph g) {
-    g.getNodes()[mapCode[nodeCode]].showNode();
-}
-
 void readFiles::readNodes() {
     ifstream nodesStream (NODESFILENAME);
     int n = 0;
