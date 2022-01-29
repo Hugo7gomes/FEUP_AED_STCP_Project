@@ -108,7 +108,6 @@ double Graph::dijkstra_getDistance(int a, int b) {
     return nodes[b].getDist();
 }
 
-//path para a distancia, zonas e menos paragens
 list<int> Graph::getPath(int a, int b) {
     list<int> path;
     if (nodes[b].getDist() == INF) return path;
@@ -237,7 +236,7 @@ void Graph::addEdgesWalk(double distance) {
         for(node& n1:nodes){
             if(n.getCode().second == n1.getCode().second)
                 continue;
-            bool addEdgeBool;
+            bool addEdgeBool = true;
             for(Edge e: n.getAdj()){
                 if(e.dest == n1.getCode().second){
                     addEdgeBool = false;

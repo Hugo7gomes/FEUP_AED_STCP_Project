@@ -80,7 +80,6 @@ void readFiles::readLines(Graph& g) {
         readLine(fileLineName1.str(), lineCode, g);
     }
     linesStream.close();
-
 }
 
 map<string, int>& readFiles::getMapCode() {

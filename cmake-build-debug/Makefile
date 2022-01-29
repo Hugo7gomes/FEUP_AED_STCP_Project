@@ -128,6 +128,19 @@ ProjectSTCP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProjectSTCP.dir\build.make CMakeFiles/ProjectSTCP.dir/build
 .PHONY : ProjectSTCP/fast
 
+#=============================================================================
+# Target rules for targets named Doxygen
+
+# Build rule for target.
+Doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Doxygen
+.PHONY : Doxygen
+
+# fast build rule for target.
+Doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
+.PHONY : Doxygen/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -280,6 +293,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Doxygen
 	@echo ... ProjectSTCP
 	@echo ... main.obj
 	@echo ... main.i

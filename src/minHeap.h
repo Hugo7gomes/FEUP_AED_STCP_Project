@@ -27,22 +27,69 @@ class MinHeap {
     unordered_map<K, int> pos; // maps a key into its position on the array a
     const K KEY_NOT_FOUND;
 
+    /**
+     * Faz um valor subir a árvore até chegar a sua posição
+     * @param i
+     */
     void upHeap(int i);
+
+    /**
+     * Faz um valor descer a árvore até chegar a sua posição
+     * @param i
+     */
     void downHeap(int i);
+
+    /**
+     * Troca duas posições da heap (atualiza as suas posições)
+     * @param i1
+     * @param i2
+     */
     void swap(int i1, int i2);
 
 public:
+    /**
+     * Construtor da classe minHeap
+     * @param n tamanho máximo da minHeap
+     * @param notFound
+     */
     MinHeap(int n, const K& notFound); // Create a min-heap for a max of n pairs (K,V) with notFound returned when empty
-    int getSize();              // Return number of elements in the heap
-    bool hasKey(const K& key);  // Heap has key?
-    void insert(const K& key, const V& value);      // Insert (key, value) on the heap
-    void decreaseKey(const K& key, const V& value); // Decrease value of key
-    K removeMin(); // remove and return key with smaller value
+
+    /**
+     *
+     * @return o número de elementos na heap
+     */
+    int getSize();
+
+    /**
+     * Este método indica se a heap tem uma chave
+     * @param key
+     * @return true se tiver
+     */
+    bool hasKey(const K& key);
+
+    /**
+     * Este método insere (key,value) na heap
+     * @param key
+     * @param value
+     */
+    void insert(const K& key, const V& value);
+
+    /**
+     * Este método diminui o valor de uma key
+     * @param key
+     * @param value
+     */
+    void decreaseKey(const K& key, const V& value);
+
+    /**
+     * Este método remove e retorna a key com o menor valor
+     * @return a key com o menor valor
+     */
+    K removeMin();
 };
 
-// ----------------------------------------------
 
-// Make a value go "up the tree" until it reaches its position
+
 template <class K, class V>
 void MinHeap<K,V>::upHeap(int i) {
     while (i>1 && a[i].value < a[PARENT(i)].value) { // while pos smaller than parent, keep swapping to upper position
@@ -51,7 +98,7 @@ void MinHeap<K,V>::upHeap(int i) {
     }
 }
 
-// Make a value go "down the tree" until it reaches its position
+
 template <class K, class V>
 void MinHeap<K,V>::downHeap(int i) {
     while (LEFT(i) <= size) { // while within heap limits
@@ -63,7 +110,6 @@ void MinHeap<K,V>::downHeap(int i) {
     }
 }
 
-// Swap two positions of the heap (update their positions)
 template <class K, class V>
 void MinHeap<K,V>::swap(int i1, int i2) {
     Node tmp = a[i1]; a[i1] = a[i2]; a[i2] = tmp;
@@ -71,26 +117,23 @@ void MinHeap<K,V>::swap(int i1, int i2) {
     pos[a[i2].key] = i2;
 }
 
-// ----------------------------------------------
 
-// Create a min-heap for a max of n pairs (K,V) with notFound returned when empty
 template <class K, class V>
 MinHeap<K,V>::MinHeap(int n, const K& notFound) : KEY_NOT_FOUND(notFound), size(0), maxSize(n), a(n+1) {
 }
 
-// Return number of elements in the heap
 template <class K, class V>
 int MinHeap<K,V>::getSize() {
     return size;
 }
 
-// Heap has key?
+
 template <class K, class V>
 bool MinHeap<K, V>::hasKey(const K& key) {
     return pos.find(key) != pos.end();
 }
 
-// Insert (key, value) on the heap
+
 template <class K, class V>
 void MinHeap<K,V>::insert(const K& key, const V& value) {
     if (size == maxSize) return; // heap is full, do nothing
@@ -100,7 +143,6 @@ void MinHeap<K,V>::insert(const K& key, const V& value) {
     upHeap(size);
 }
 
-// Decrease value of key to the indicated value
 template <class K, class V>
 void MinHeap<K,V>::decreaseKey(const K& key, const V& value) {
     if (!hasKey(key)) return; // key does not exist, do nothing
@@ -110,7 +152,6 @@ void MinHeap<K,V>::decreaseKey(const K& key, const V& value) {
     upHeap(i);
 }
 
-// remove and return key with smaller value
 template <class K, class V>
 K MinHeap<K,V>::removeMin() {
     if (size == 0) return KEY_NOT_FOUND;
